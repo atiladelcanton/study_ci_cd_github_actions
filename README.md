@@ -18,3 +18,7 @@
 - Enviar para o docker registry privado
 - Atualizar versão do argo
 - Refletir em live
+
+## Observabilidade
+
+-  New Relic
