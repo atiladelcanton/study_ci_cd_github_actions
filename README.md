@@ -2,23 +2,34 @@
 
 ## Projeto
 -   Incluír docker no projeto
-
-## Infra
+## Fase 1
+### Infra
 - Configurar Instancia DO
--   Configurar Kubernets
--   Configurar Argo
 
-## CI
+
+### CI
 -   Rodar Testes pelo Docker
 -   Analise estatica código
 -   Envio Teste e Analise Estatica
-## CD
 
+### CD
 - Gerar build da empresa
+- Atualizar servidor live
+
+
+
+## Fase 2
+
+### Infra
+-   Configurar Kubernets
+-   Configurar Argo
+
+### CD
+
 - Enviar para o docker registry privado
 - Atualizar versão do argo
 - Refletir em live
 
-## Observabilidade
+### Observabilidade
 
 -  New Relic
