@@ -1,7 +1,8 @@
 # Road Maps
 
 ## Projeto
--   Incluír docker no projeto
+-   Incluír docker no projeto :white_check_mark:
+-   Incluir health Check :white_check_mark:
 ## Fase 1
 ### Infra
 - Configurar Instancia DO
