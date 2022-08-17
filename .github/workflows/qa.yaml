@@ -1,0 +1,19 @@
+name: Estudo CI/CD
+
+on:
+  push:
+    branches:
+      - "qa"
+jobs:
+  application-tests:
+    name: Test Application
+    runs-on:  ubuntu-latest
+
+    steps:
+
+    - uses: actions/checkout@v2
+    - name: Build docker
+      run: |
+        echo ---Building and starting up docker---
+        docker-compose -f docker-compose.yml  -p  testing up -d
+        echo ---Containers  up---
