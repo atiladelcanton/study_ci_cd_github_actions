@@ -12,7 +12,6 @@ jobs:
     steps:
 
     - uses: whoan/docker-build-with-cache-action@v5
-    - name: Build and Cache image
       with:
         compose_file: docker-compose.yml
     - uses: actions/checkout@v2
