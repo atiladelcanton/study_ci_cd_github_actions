@@ -43,18 +43,6 @@ services:
     restart: unless-stopped
     networks:
       - estudo
-  estudo-postgres-test:
-    image: postgres
-    container_name: estudo-postgres-test
-    env_file:
-      - ./docker/docker-compose-env/application.env
-    ports:
-      - "5433:5432"
-    volumes:
-      - "pgsql:/var/lib/postgresql/data"
-    restart: unless-stopped
-    networks:
-      - estudo
   estudo-redis:
     image: redis:latest
     container_name: estudo-redis
