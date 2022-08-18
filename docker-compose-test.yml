@@ -15,4 +15,9 @@ services:
       - ./:/var/www/html/
     restart: unless-stopped
     networks:
-      - estudo
+      - estudo-test
+
+networks:
+  estudo-test:
+    external:
+      name: estudo
