@@ -6,7 +6,7 @@ services:
     user: "${UXID}:${GID}"
     build:
       context: .
-      target: dev
+      target: ci
     command:
         sh -c "php artisan test"
     env_file:
