@@ -19,5 +19,5 @@ jobs:
     - name: Run Test
       run: |
         echo  --- Runing test cases ---
-         docker-compose -f docker-compose.yml -p testing up --build --exit-code-from estudo-app-test
+         docker-compose -f docker-compose-test.yml -p testing up --build --exit-code-from estudo-app-test
         echo --- Completed test cases --
