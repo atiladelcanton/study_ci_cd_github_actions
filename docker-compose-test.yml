@@ -20,4 +20,4 @@ services:
 networks:
   estudo-test:
     external:
-      name: estudo
+      name: estudo-ci-cd

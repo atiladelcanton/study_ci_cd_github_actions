@@ -68,6 +68,7 @@ services:
 
 networks:
   estudo:
+    name: estudo-ci-cd
     driver: bridge
 volumes:
   pgsql:
