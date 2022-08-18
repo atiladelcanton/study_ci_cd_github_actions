@@ -8,7 +8,7 @@ services:
       context: .
       target: dev
     command:
-        bash -c "php artisan test"
+        sh -c "php artisan test"
     env_file:
       - ./docker/docker-compose-env/application.env
     volumes:
