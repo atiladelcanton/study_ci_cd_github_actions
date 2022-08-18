@@ -19,5 +19,5 @@ jobs:
     - name: Run Test
       run: |
         echo  --- Runing test cases ---
-        docker exec estudo-app composer test
+        docker exec estudo-app php artisan test
         echo --- Completed test cases --
