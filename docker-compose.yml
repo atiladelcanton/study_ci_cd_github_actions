@@ -18,7 +18,24 @@ services:
       - estudo-postgres
     networks:
       - estudo
-
+  estudo-app-test:
+    image: atilarampazo/api
+    user: "${UXID}:${GID}"
+    build:
+      context: .
+      target: dev
+    command:
+        bash -c "php artisan test"
+    env_file:
+      - ./docker/docker-compose-env/application.env
+    volumes:
+      - ./:/var/www/html/
+    restart: unless-stopped
+    depends_on:
+      - estudo-redis
+      - estudo-postgres
+    networks:
+      - estudo
   estudo-nginx:
     image: nginx:alpine
     container_name: estudo-nginx

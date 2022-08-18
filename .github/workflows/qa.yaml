@@ -19,5 +19,5 @@ jobs:
     - name: Run Test
       run: |
         echo  --- Runing test cases ---
-        docker exec estudo-app php artisan test
+         docker-compose -f ./<REPO_NAME>/docker-compose.test-github.yml -p testing up --build --exit-code-from estudo-app-test
         echo --- Completed test cases --
