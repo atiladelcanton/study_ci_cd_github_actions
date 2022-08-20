@@ -3,7 +3,7 @@ version: "3.8"
 services:
   estudo-app-test:
     image: atilarampazo/api
-    user: "${UXID}:${GID}"
+    user: "root:root"
     build:
       context: .
       target: ci
