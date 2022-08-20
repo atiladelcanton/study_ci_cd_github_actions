@@ -8,7 +8,7 @@ services:
       context: .
       target: ci
     command:
-        sh -c "php artisan test"
+        sh -c "composer install && php artisan test"
     env_file:
       - ./docker/docker-compose-env/application.env
     volumes:
