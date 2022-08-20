@@ -14,10 +14,4 @@ services:
     volumes:
       - ./:/var/www/html/
     restart: unless-stopped
-    networks:
-      - estudo-test
 
-networks:
-  estudo-test:
-    external:
-      name: estudo-ci-cd
