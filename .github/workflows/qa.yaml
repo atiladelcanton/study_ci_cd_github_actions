@@ -14,7 +14,7 @@ jobs:
     - name: Build docker
       run: |
         echo ---Building and starting up docker---
-        docker-compose -f docker-compose.yml up -d
+        docker-compose run --rm ci
         echo ---Containers  up---
     - name: Run Test
       run: |
