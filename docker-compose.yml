@@ -3,11 +3,29 @@ version: "3.8"
 services:
   estudo-app:
     image: atilarampazo/api
-    user: "${UXID}:${GID}"
+    user: "root:root"
     build:
       context: .
       target: dev
     container_name: estudo-app
+    env_file:
+      - ./docker/docker-compose-env/application.env
+    volumes:
+      - ./:/var/www/html/
+    restart: unless-stopped
+    depends_on:
+      - estudo-redis
+      - estudo-postgres
+    networks:
+      - estudo
+  estudo-app-test:
+    image: atilarampazo/api
+    user: "root:root"
+    build:
+      context: .
+      target: ci
+    command:
+        sh -c "php artisan test"
     env_file:
       - ./docker/docker-compose-env/application.env
     volumes:
