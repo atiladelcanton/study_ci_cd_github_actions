@@ -14,10 +14,6 @@ jobs:
     - name: Build docker
       run: |
         echo ---Building and starting up docker---
-        docker-compose run --rm ci
+        docker-compose run -f docker-compose-test.yml --rm estudo-app-test
         echo ---Containers  up---
-    - name: Run Test
-      run: |
-        echo  --- Runing test cases ---
-         docker-compose -f docker-compose-test.yml -p testing up --build --exit-code-from estudo-app-test
-        echo --- Completed test cases --
+
