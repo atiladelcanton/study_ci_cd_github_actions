@@ -6,14 +6,14 @@ on:
       - "qa"
 jobs:
   application-tests:
-    name: Test Application
+    name: Estudo Github Actions
     runs-on:  ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build docker
+    - name: Build 🥳 and Run Tests 🧪 
       run: |
-        echo ---Building and starting up docker---
+        echo ---Building / Run Test---
         docker-compose run  --rm estudo-app-test
-        echo ---Containers  up---
+
 
